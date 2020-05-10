@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DSCE</title>
+  <link rel="stylesheet" type="text/css" href="PROJECT.CSS">
+</head>
+<body>
+ <H1 ALIGN="center">STUDENTS DATA ENTRY</H1>
+ <div ALIGN="center" class="col">
+                <form ALIGN="center" class="signupform" >
+                <h6>STUDENT DETAILS ENTRY</h6>
+                <input type="text" name="name" placeholder="Full Name"><br>
+                <input type="text" name="name" placeholder="USN-10 DIGIT"><br>
+                <input type="email" name="email" placeholder="Email"><br>
+                <button style="trial" type="submit" value="submit">SUBMIT</button>
+                <p style="font-size:11px;">* We don’t share your personal info with anyone. Check out our <a href="#">Privacy Policy</a> for more information.</p>
+                </form>
+ </div>
+ <div id="container" class="col">
+	<video autoplay="true" id="videoElement">
+	</video>
+    <P>Adjust camera...<P>
+ </div>
+<script>
+var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+</script>
+
+</body>
+</html>
